@@ -4,8 +4,12 @@ using namespace std;
 int main()
 {
     int x;
-    char c;
-    cin >> x >> c;
+    cin >> x;
     cout << x << endl;
+    char c = 'A';
+    cout << (int)c << endl;
+    inty
+    
+
     return 0;
 }
