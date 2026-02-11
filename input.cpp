@@ -8,7 +8,6 @@ int main()
     cout << x << endl;
     char c = 'A';
     cout << (int)c << endl;
-    inty
     
 
     return 0;
