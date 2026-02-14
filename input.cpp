@@ -6,7 +6,7 @@ int main()
     int x;
     cin >> x;
     cout << x << endl;
-    char c = 'A';
+    char c = 'a';
     cout << (int)c << endl;
 
     return 0;
