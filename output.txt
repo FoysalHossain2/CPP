@@ -1,1 +1,2 @@
-Hello
+Fun -> 10
+Main -> 10
