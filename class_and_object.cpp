@@ -11,11 +11,15 @@ class student
 
 int main()
 {
-    student a;
-    a.roll = 101;
-    a.gpa = 3.75;
-    char temp[] = "John Doe";
-    strcpy(a.name, temp);
+    student a, b;
+    cin.getline(a.name, 100);
+    cin >> a.name >> a.roll >> a.gpa;
+    cin.ignore();
+    //getchar();
+    cin.getline(b.name, 100);
+    cin >> b.name >> b.roll >> b.gpa;
+    
 
     cout << a.name << " " << a.roll << " " << a.gpa << endl;
+    cout << b.name << " " << b.roll << " " << b.gpa << endl;
 }
