@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void shiftZero() {
+int main()
+{
     int n;
     cin >> n;
     int a[n];
@@ -11,36 +12,28 @@ void shiftZero() {
         cin >> a[i];
     }
 
-    int index = 0;
+    int minNum = 0;
+    int maxNum = 0;
 
     for (int i = 0; i < n; i++)
     {
-       if(a[i] != 0){
-         a[index] = a[i];
-         index++;
+       if (a[i] < a[minNum])
+       {
+        minNum = i;
+       }
+       if (a[i] > a[maxNum])
+       {
+        maxNum = i;
        }
     }
 
-    while (index < n)
-    {
-        a[index] = 0;
-        index++;
-    }
-    
+    swap(a[minNum], a[maxNum]);
 
     for (int i = 0; i < n; i++)
     {
         cout << a[i] << " ";
-
     }
-    
-    
-}
 
-int main()
-{
-
-    shiftZero();
 
     return 0;
 }
