@@ -24,6 +24,7 @@ int main() {
       break;
     }
 
+    
     i++;
     j--;
     
