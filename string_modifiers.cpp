@@ -11,8 +11,12 @@ int main()
     // s.push_back('A');
     // s += 'B';
 
-    s.pop_back();
-    s.pop_back();
+    // s.pop_back();
+    // s.pop_back();
+
+    // s.erase(3,5);
+    // s.replace(6,5, "Bangladesh");
+    s.insert(5,"Foysal");
 
     cout << s << endl;
     return 0;
