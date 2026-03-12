@@ -6,9 +6,9 @@ int main()
     string s;
     getline(cin, s);
     cout << s << endl;
-    stringstream ss(s);
+    stringstream dd(s);
     string word;
-    while (ss >> word)
+    while (dd >> word)
     {
         cout << word << endl;
     }
