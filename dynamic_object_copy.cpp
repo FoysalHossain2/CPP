@@ -7,6 +7,7 @@ class Cricketer
     string country;
     int jersey;
 
+    //constactor function
     Cricketer(string country, int jersey)
     {
         this->country = country;
@@ -18,8 +19,8 @@ int main()
 {
     Cricketer* dhoni = new Cricketer("India", 100);
     Cricketer* kholi = new Cricketer("India", 18);
-    kholi = dhoni;
+    *kholi = *dhoni;
     delete dhoni;
-    cout << dhoni->jersey << " " << kholi->jersey << endl;
+    cout << dhoni->jersey << " " < kholi->jersey endl;
     return 0;
 }
