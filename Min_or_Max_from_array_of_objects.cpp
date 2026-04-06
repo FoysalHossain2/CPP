@@ -19,12 +19,18 @@ int main()
     {
         cin >> a[i].name >> a[i].roll >> a[i].marks;
     }
-    int mn = INT_MAX;
+
+    Student mn;
+    mn.marks = INT_MIN;
+
     for (int i = 0; i < n; i++)
     {
-        mn = min(a[i].marks,mn);
+        if(a[i].marks > mn.marks)
+        {
+            mn = a[i];
+        }
     }
-    cout << mn << endl;
+    cout << mn.name << " " << mn.roll << " " << mn.marks << endl;
 
     return 0;
 }
