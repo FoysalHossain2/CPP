@@ -3,43 +3,42 @@ using namespace std;
 
 class Student
 {
-    public:
+public:
     string name;
-    int roll;
-    int marks;
+    int cls;
+    string sc;
+    int ID;
 };
-
-bool cmp(Student 1, Student r)
-{
-    if (l.marks < r.marks)
-    {
-        return true;
-    }
-    else 
-    {
-        return false;
-    }
-    
-}
 
 
 int main()
 {
-    // int a[5];
+ 
     int n;
     cin >> n;
     Student a[n];
     for (int i = 0; i < n; i++)
     {
-        cin >> a[i].name >> a[i].roll >> a[i].marks;
+        cin >> a[i].name >> a[i].cls >> a[i].sc >> a[i].ID;
     }
 
-    sort(a, a+n, cmp);
+    string sce[n];
     for (int i = 0; i < n; i++)
     {
-        cout << a[i].name << " " << a[i].roll << " " << a[i].marks << endl;
-    } 
-    cout << mn << endl;
+        sce[i] = a[i].sc;
+    }
+    reverse(sce, sce + n);
+    
+    for (int i = 0; i < n; i++)
+    {
+        a[i].sc = sce[i];
+    }
 
+    for (int i = 0; i < n; i++)
+    {
+        cout << a[i].name << " " << a[i].cls << " " << a[i].sc << " " << a[i].ID << endl;
+    }
+    
+    
     return 0;
 }
