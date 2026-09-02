@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+vector<int> newArray(vector<int> A, vector<int> B){
+    vector<int> C;
+    for(int x : A) C.push_back(x);
+    for(int x : B) C.push_back(x);
+    return C;
+}
+
+int main()
+{
+    int N;
+    cin >> N;
+    vector<int> A(N), B(N);
+
+    for (int i = 0; i < N; i++)
+    {
+        cin >> A[i];
+    }
+
+    for (int i = 0; i < N; i++)
+    {
+        cin >> B[i];
+    }
+
+    vector<int> C = newArray(B, A);
+    
+    for(int x : C)
+    {
+        cout << x << " ";
+    }
+
+    return 0;
+}
