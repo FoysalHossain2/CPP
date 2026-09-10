@@ -12,7 +12,7 @@ int main()
     }
 
     vector<long long int> pre(n+1);
-    pre[1] = v[1]
+    pre[1] = v[1];
     for (int i = 2; i <= n; i++)
     {
         pre[i] = pre[i-1] + v[i];
