@@ -2,9 +2,10 @@
 using namespace std;
 
 class Node {
-    public:
-        int val;
-        Node* next;
+public:
+    int val;
+    Node* next;
+
     Node(int val)
     {
         this->val = val;
@@ -12,25 +13,35 @@ class Node {
     }
 };
 
-void insert_at_head(Node* &head, int val)
+void insert_at_tail(Node* &head, int val)
 {
     Node* newnode = new Node(val);
-    newnode->next = head;
-    head = newnode;
+
+    if (head == NULL)
+    {
+        head = newnode
+        return;
+    }
+    
+    Node* tmp = head;
+    while (tmp->next != NULL)
+    {
+        tmp = tmp->next;
+    }
+
+    tmp->next = newnode;
 };
 
 void print_linked_list(Node* head) 
 {
-    
-    Node* tem = head;
-    while (tem != NULL)
-    {
-        cout << tem->val << endl;
-        tem = tem->next;
-    }
-    
-};
+    Node* tmp = head;
 
+    while (tmp != NULL)
+    {
+        cout << tmp->val << " ";
+        tmp = tmp->next;
+    }
+};
 
 int main()
 {
@@ -41,9 +52,7 @@ int main()
     head->next = a;
     a->next = b;
 
-    insert_at_head(head, 100);
-    insert_at_head(head, 200);
-    insert_at_head(head, 300);
+    insert_at_tail(head, 40);
 
     print_linked_list(head);
 
