@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void fun(int* p)
+void fun(int* &p)
 {
     p = NULL;
 }
