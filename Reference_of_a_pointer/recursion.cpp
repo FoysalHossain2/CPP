@@ -1,22 +1,23 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void printNum(int n) {
+void rec(int i ,int n) {
 
-    if (n == 1)
+    //base case
+    if (i>n)
     {
-        cout << "1\n";
         return;
     }
     
-    cout << n << " ";
-    printNum(n-1);
+    cout << i << endl;
+    rec(i+1,n);
 
 }
 
 int main()
 {
 
-    printNum(100);
+    int n = 5;
+    rec(1,n);
     return 0;
 }
