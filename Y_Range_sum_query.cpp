@@ -24,7 +24,7 @@ int main()
         int l, r;
         cin >> l >> r;
         long long int sum;
-        if ( l == 1 )
+        if ( l == 1 ) 
         {
             sum = pre[r];
         }
