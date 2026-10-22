@@ -26,7 +26,7 @@ void print_head(Node* head)
     
 }
 
-void insert_at_any_pos(Node* head, int val)
+void insert_at_any_pos(Node* head,int idx, int val)
 {
     Node* newnode = new Node(val);
     Node* tmp = head;
@@ -35,9 +35,10 @@ void insert_at_any_pos(Node* head, int val)
         tmp = tmp->next;
     }
     newnode->next = tmp->next;
-
+    tmp->next->prev = newnode;
+    tmp->next = newnode;
+    newnode->prev = tmp;
 }
-
 
 
 int main()
