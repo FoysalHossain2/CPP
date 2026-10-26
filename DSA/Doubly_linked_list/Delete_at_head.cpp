@@ -41,7 +41,6 @@ void delete_at_head(Node* &head, Node* &tail,)
 }
 
 
-
 int main()
 {
     Node* head = new Node(10);

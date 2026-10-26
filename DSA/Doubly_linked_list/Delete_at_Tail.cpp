@@ -26,9 +26,9 @@ void print_head(Node* head)
     
 }
 
-void delete_at_tail(Node* &head, Node* &tail,)
+void delete_at_tail(Node* &head, Node* &tail)
 {
-    Node* deleteNode = head;
+    Node* deleteNode = tail;
     tail = tail->prev;
     delete deleteNode;
     if (tail == NULL)
@@ -54,7 +54,7 @@ int main()
     a->next = tail;
     tail->prev = a;
 
-    insert_at_tail(head, tail, 100);
+    delete_at_tail(head, tail);
     print_head(head);
 
     return 0;
